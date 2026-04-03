@@ -4,10 +4,11 @@ Add discovery questions to diagrams using **two consolidated boxes** positioned 
 
 ## When to add question boxes
 
-- **Smart discovery mode**: Always add after generating from Snowflake metadata
+- **Current + Future State diagrams (Mode 3)**: Always add to both current and future state diagrams
 - **Customer-facing diagrams**: Flag what needs validation before finalizing
 - **Architecture reviews**: Surface risks and opportunities
 - **SE engagements**: Identify business cases alongside technical gaps
+- **Any diagram with unknowns**: When the provided context leaves gaps worth flagging
 
 ---
 

@@ -7,9 +7,14 @@ A [Cortex Code](https://docs.snowflake.com/en/user-guide/cortex-code/cortex-code
 - Generates native `.drawio` files (mxGraphModel XML) from plain-English descriptions
 - Supports flowcharts, architecture diagrams, ER diagrams, sequence diagrams, network diagrams, mockups, and more
 - Exports to PNG, SVG, or PDF with embedded diagram XML (remains editable in draw.io)
-- Includes branded SVG icons for common data tools (Snowflake, Airflow, dbt, Kafka, Spark, Tableau, etc.)
-- Smart discovery mode: queries live Snowflake metadata to generate architecture diagrams from actual account objects
+- Uses color-coded shapes for tool/service representation with a built-in category color system
 - Adds annotation boxes to flag technical unknowns and business questions
+
+## Three Modes
+
+1. **Image to Diagram** - Provide a screenshot or image and recreate it as an editable `.drawio` file
+2. **Proposed Snowflake Architecture** - Design a new Snowflake-centric workflow for a specific use case, focused on data flow and Snowflake features (not medallion patterns)
+3. **Current + Future State** - Describe the customer's existing data stack; get TWO diagrams: current state and a recommended Snowflake-optimized future state
 
 ## Installation
 
@@ -26,8 +31,6 @@ drawio/
   SKILL.md                        # Main skill definition
   references/
     xml-reference.md              # draw.io XML styles, edge routing, containers
-    icons.md                      # SVG icon catalog for data tools
-    smart-discovery.md            # Snowflake metadata discovery workflow
     annotations.md                # Question box templates for diagrams
 ```
 
@@ -37,5 +40,6 @@ Once installed, Cortex Code automatically invokes this skill when you ask it to 
 
 - "Draw a flowchart for user authentication"
 - "Create an architecture diagram for our ETL pipeline"
-- "Generate a PNG diagram of the medallion architecture"
-- "Diagram my Snowflake schema using live metadata"
+- "Design a customer intelligence architecture on Snowflake"
+- "Here's a screenshot of our architecture - recreate it as a drawio file"
+- "Build a current and future state diagram for our data stack"
